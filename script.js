@@ -1,59 +1,62 @@
-// Get the element where countdown and message will be displayed
 const countdownElement = document.getElementById('countdown');
 
-// Countdown function using callback hell
 const countdown = (num, callback) => {
-    countdownElement.innerText = num;
+    countdownElement.innerHTML = "10" + " 🎉";
     setTimeout(() => {
-        num -= 1;
-        countdownElement.innerText = num;
+        countdownElement.innerHTML = "9" + " 🥳";
         setTimeout(() => {
-            num -= 1;
-            countdownElement.innerText = num;
+            countdownElement.innerHTML = "9" + " 🎂";
             setTimeout(() => {
-                num -= 1;
-                countdownElement.innerText = num;
+                countdownElement.innerHTML = "8" + " 🎁";
                 setTimeout(() => {
-                    num -= 1;
-                    countdownElement.innerText = num;
+                    countdownElement.innerHTML = "7" + " 🍰";
                     setTimeout(() => {
-                        num -= 1;
-                        countdownElement.innerText = num;
+                        countdownElement.innerHTML = "6" + " 🎈";
                         setTimeout(() => {
-                            num -= 1;
-                            countdownElement.innerText = num;
+                            countdownElement.innerHTML = "5" + " 🎊";
                             setTimeout(() => {
-                                num -= 1;
-                                countdownElement.innerText = num;
+                                countdownElement.innerHTML = "4" + " 🎇";
                                 setTimeout(() => {
-                                    num -= 1;
-                                    countdownElement.innerText = num;
+                                    countdownElement.innerHTML = "3" + " 🎆";
                                     setTimeout(() => {
-                                        num -= 1;
-                                        countdownElement.innerText = num;
+                                        countdownElement.innerHTML = "2" + " 🌟";
                                         setTimeout(() => {
-                                            num -= 1;
-                                            countdownElement.innerText = num;
+                                            countdownElement.innerHTML = "1" + " 🎈";
                                             setTimeout(() => {
-                                                countdownElement.innerText = 'Happy Independence Day!';
-                                                // Additional code can be added here if needed
-                                                callback();
-                                            }, 1000);
-                                        }, 1000);
-                                    }, 1000);
-                                }, 1000);
-                            }, 1000);
-                        }, 1000);
-                    }, 1000);
-                }, 1000);
-            }, 1000);
-        }, 1000);
-    }, 1000);
+                                                countdownElement.innerHTML = "0" + " 🎂";
+                                                setTimeout(() => {
+                                                    countdownElement.innerHTML = "Wishing you a happiest birthday, Selva Anna! 🎉 Be happy as always!";
+                                                    countdownElement.style.color = getRandomColor();
+                                                    applyTextAnimation(countdownElement);
+                                                    callback();
+                                                }, 500);
+                                            }, 500);
+                                        }, 500);
+                                    }, 500);
+                                }, 500);
+                            }, 500);
+                        }, 500);
+                    }, 500);
+                }, 500);
+            }, 500);
+        }, 500);
+    }, 500);
 };
 
-// Start countdown
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+function applyTextAnimation(element) {
+    element.style.animation = "colorChange 1.5s infinite alternate";
+}
+
 countdown(10, () => {
-    // Callback function after countdown is complete
     console.log('Countdown completed!');
-    // Additional actions can be performed here
+    // Additional actions can be performed here after the countdown
 });
