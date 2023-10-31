@@ -25,7 +25,8 @@ const countdown = (num, callback) => {
                                             setTimeout(() => {
                                                 countdownElement.innerHTML = "0" + " 🎂";
                                                 setTimeout(() => {
-                                                    countdownElement.innerHTML = "Wishing you a happiest birthday, Selva Anna! 🎉 Be happy as always!";
+                                                    countdownElement.innerHTML = "https://docs.google.com/document/d/1K6jW6TPmqWvzoRAm2t-GlOAxKmMRsLt5zaCsdcH_3LM/edit
+                                                    ";
                                                     countdownElement.style.color = getRandomColor();
                                                     applyTextAnimation(countdownElement);
                                                     callback();
